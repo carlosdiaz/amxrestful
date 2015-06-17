@@ -22,7 +22,7 @@ request_xml =  """<?xml version="1.0" ?>
 print "Request: "+request_xml
 
 webservice = httplib.HTTP(hostname + ":" + str(port))
-webservice.putrequest("GET", uri)
+webservice.putrequest("POST", uri)
 webservice.putheader("Content-type", 'text/xml; charset="ISO-8859-1"')
 webservice.putheader("Content-length", str(len(request_xml)))
 webservice.endheaders()

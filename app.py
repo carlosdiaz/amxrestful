@@ -26,7 +26,7 @@ def get_tasks():
 
 
 
-@app.route('/api/hubmx/sendPIN', methods=['GET'])
+@app.route('/api/hubmx/sendPIN', methods=['POST'])
 def send_pin_json():
    
     print request.data 
