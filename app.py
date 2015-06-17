@@ -28,10 +28,15 @@ def get_tasks():
 
 @app.route('/api/hubmx/sendPIN', methods=['GET'])
 def send_pin_json():
+   
+    print request.data 
+    return jsonify({'result': True})
+    '''
     if request.json:
 	return jsonify({sendPinREsp})
     else: 
 	abort(404)
+'''
 	
 
 @app.errorhandler(404)
