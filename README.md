@@ -1,2 +1,4 @@
 # amxrestful
-Some restful methods for amx
+Some restful methods for amx:
+
+	sendPIN request
