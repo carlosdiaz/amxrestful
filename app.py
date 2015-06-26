@@ -19,29 +19,6 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/X
 
 
 
-request_xml1 = """<?xml version="1.0" encoding="ISO-8859-1"?>
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
-xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns8156="http://tempuri.org">
-<SOAP-ENV:Header>
-<tns:RequestSOAPHeader xmlns:tns="http://www.huawei.com/schema/osg/common/v2_1"><tns:AppId>N</tns:AppId>
-<tns:TransId>2015062300100779801</tns:TransId><tns:OA></tns:OA><tns:FA></tns:FA></tns:RequestSOAPHeader>
-<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
-<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
-<wsse:Username>XXX</wsse:Username>
-<wsse:Password Type="...#PasswordDigest">XXX</wsse:Password>
-<wsse:Nonce>XXX</wsse:Nonce><wsse:Created>2015-06-23T00:10:07Z</wsse:Created></wsse:UsernameToken></wsse:Security>
-</SOAP-ENV:Header>
-<SOAP-ENV:Body>
-<sendPIN xmlns="http://www.csapi.org/schema/parlayx/sendpin/v1_0/local">
-<msisdn>123456</msisdn>
-<productID>123456</productID>
-</sendPIN>
-</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>"""
-
-
-
 
 @app.route('/api/hubmx/sendPIN', methods=['POST'])
 def send_pin_json():
