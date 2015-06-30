@@ -51,6 +51,9 @@ def validateRequestSendPin(xml):
     return False
 
 
+@app.route('/api/hubmx/confirmPIN', methods=['POST'])
+def confirm_pin_json():
+    return "<resultCode>0</resultCode>"
 
 
 def send_pin_response(success): 
